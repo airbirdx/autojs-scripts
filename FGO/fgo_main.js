@@ -7,8 +7,9 @@ var FS = require('fgo_cmd.js');
 
 // print('!- SCRIPT START');
 
-yanzuo_xiaomo();  // 赝作复刻 - 术本 - 心脏 - 小莫 3T 冲浪
+// yanzuo_xiaomo();  // 赝作复刻 - 术本 - 心脏 - 小莫 3T 冲浪
 // tst_skill();
+infi_awards(7);
 
 // print('!- SCRIPT END');
 
@@ -70,23 +71,22 @@ function get_exp(){
 
 }
 
-
-
 // ----------------------------------------------------------------- //
 // 功能：无限池自动抽奖
+// 默认：奖池 300 的时候点击 200 下
+//      ->  400 点击 270 下
 // ----------------------------------------------------------------- //
-function infi_awards(){
-
-	var count = 200;
-
-	for (i = 0; i < count; i++)
-		FS.INFI0();
-
-
-	
-	
+function infi_awards(n, pn){
+	var count = arguments[1]? arguments[1] : 200;
+	for ( ni = 0; ni < n; ni++ ){
+		sleep(1000);      // 1s  缓启动
+		for ( i = 0; i < count; i++ )
+			FS.INFI0();
+		FS.INFI1();
+		FS.INFI2();
+		FS.INFI3();
+	}
 }
-
 
 // ----------------------------------------------------------------- //
 // 活动：赝作复刻

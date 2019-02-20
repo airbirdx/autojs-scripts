@@ -508,5 +508,29 @@ CMD.NEXT = function(duration){
     sleep(duration);
 };
 
+CMD.INFI0 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 200;
+    click(584, 647);
+    sleep(duration);
+};
+
+CMD.INFI1 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 500;
+    click(1710, 365);
+    sleep(duration);
+};
+
+CMD.INFI2 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(1255, 840);
+    sleep(duration);
+};
+
+CMD.INFI3 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(960, 840);
+    sleep(duration);
+};
+
 module.exports = CMD;
 
