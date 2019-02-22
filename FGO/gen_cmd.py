@@ -5,7 +5,7 @@ import sys
 # data_only=True, for read value, otherwise read the math equation in cell
 fgo_xls  = openpyxl.load_workbook('FGO.xlsx', data_only=True)
 fgo_cmd  = open('fgo_cmd.js', 'w+')
-fgo_func = open('fgo_func.js', 'r')
+fgo_func = open('fgo_func.js', 'r', encoding='UTF-8')
 # print(type(fgo_xls))
 
 worksheets = fgo_xls.sheetnames
@@ -30,6 +30,8 @@ basic_func_skil = []  # column=8
 # from row 3 to end
 row_start = 3
 row_end   = sheet.max_row + 1
+
+print(row_start, row_end)
 
 for i in range(row_start, row_end):
 	basic_func_name.append(sheet.cell(row=i, column=1).value)

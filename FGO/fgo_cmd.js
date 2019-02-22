@@ -1,10 +1,10 @@
 var CMD = {};
 
-// 指向性技能
-// all 是在场的所有从者数
-// sel 是需要选中的从者数
+// ָ���Լ���
+// all ���ڳ������д�����
+// sel ����Ҫѡ�еĴ�����
 // SKILL_SELXX(3, 2)
-// 对第 2 个从者释放此指向性技能（选择框中共 3 人）
+// �Ե� 2 �������ͷŴ�ָ���Լ��ܣ�ѡ����й� 3 �ˣ�
 CMD.SKILL_SELXX = function(all, sel, duration){
     var error = 0;
 
@@ -272,31 +272,31 @@ CMD.C3 = function(all, sel, duration){
 };
 
 CMD.P1 = function(duration){
-    var duration = arguments[0] ? arguments[0] : 1000;
+    var duration = arguments[0] ? arguments[0] : 500;
     click(200, 800);
     sleep(duration);
 };
 
 CMD.P2 = function(duration){
-    var duration = arguments[0] ? arguments[0] : 1000;
+    var duration = arguments[0] ? arguments[0] : 500;
     click(580, 800);
     sleep(duration);
 };
 
 CMD.P3 = function(duration){
-    var duration = arguments[0] ? arguments[0] : 1000;
+    var duration = arguments[0] ? arguments[0] : 500;
     click(960, 800);
     sleep(duration);
 };
 
 CMD.P4 = function(duration){
-    var duration = arguments[0] ? arguments[0] : 1000;
+    var duration = arguments[0] ? arguments[0] : 500;
     click(1340, 800);
     sleep(duration);
 };
 
 CMD.P5 = function(duration){
-    var duration = arguments[0] ? arguments[0] : 1000;
+    var duration = arguments[0] ? arguments[0] : 500;
     click(1720, 800);
     sleep(duration);
 };
@@ -529,6 +529,120 @@ CMD.INFI2 = function(duration){
 CMD.INFI3 = function(duration){
     var duration = arguments[0] ? arguments[0] : 3000;
     click(960, 840);
+    sleep(duration);
+};
+
+CMD.DTASK = function(duration){
+    var duration = arguments[0] ? arguments[0] : 3000;
+    click(1050, 345);
+    sleep(duration);
+};
+
+CMD.DZHUZHAN = function(duration){
+    var duration = arguments[0] ? arguments[0] : 3000;
+    click(240, 465);
+    sleep(duration);
+};
+
+CMD.P_AP50 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(335, 1040);
+    sleep(duration);
+};
+
+CMD.ZHIJIE0 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(150, 193);
+    sleep(duration);
+};
+
+CMD.ZHIJIE1 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(250, 193);
+    sleep(duration);
+};
+
+CMD.ZHIJIE2 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(350, 193);
+    sleep(duration);
+};
+
+CMD.ZHIJIE3 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(450, 193);
+    sleep(duration);
+};
+
+CMD.ZHIJIE4 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(550, 193);
+    sleep(duration);
+};
+
+CMD.ZHIJIE5 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(650, 193);
+    sleep(duration);
+};
+
+CMD.ZHIJIE6 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(750, 193);
+    sleep(duration);
+};
+
+CMD.ZHIJIE7 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(850, 193);
+    sleep(duration);
+};
+
+CMD.ZHIJIE8 = function(duration){
+    var duration = arguments[0] ? arguments[0] : 1000;
+    click(950, 193);
+    sleep(duration);
+};
+
+CMD.SKIPS = function(duration){
+    var duration = arguments[0] ? arguments[0] : 2000;
+    click(1770, 60);
+    sleep(duration);
+};
+
+CMD.SKIPN = function(duration){
+    var duration = arguments[0] ? arguments[0] : 2000;
+    click(680, 840);
+    sleep(duration);
+};
+
+CMD.SKIPY = function(duration){
+    var duration = arguments[0] ? arguments[0] : 30000;
+    click(1240, 840);
+    sleep(duration);
+};
+
+CMD.ADDAP = function(duration){
+    var duration = arguments[0] ? arguments[0] : 2000;
+    click(250, 1040);
+    sleep(duration);
+};
+
+CMD.AuAPPLE = function(duration){
+    var duration = arguments[0] ? arguments[0] : 2000;
+    click(670, 475);
+    sleep(duration);
+};
+
+CMD.CONFIRM = function(duration){
+    var duration = arguments[0] ? arguments[0] : 2000;
+    click(1260, 840);
+    sleep(duration);
+};
+
+CMD.CANCLE = function(duration){
+    var duration = arguments[0] ? arguments[0] : 2000;
+    click(660, 840);
     sleep(duration);
 };
 

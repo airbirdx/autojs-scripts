@@ -10,9 +10,9 @@ var FS = require('fgo_cmd.js');
 // infi_awards(1);    // 抽无限池 - 括号内为所要抽取的池子数目
 // daily_exp();       // 周回 - 获取 EXP 种火
 
-yanzuo_shougao();  // 赝作复刻 - 无限池效率 - 自动 + 手动
+// yanzuo_shougao();  // 赝作复刻 - 无限池效率 - 自动 + 手动
 // yanzuo_xinzang();  // 赝作复刻 - 术本刷心脏 - 小莫 3T 冲浪
-
+yanzuo_xinzang_auto(80);
 
 // console.show();
 
@@ -69,7 +69,7 @@ function daily_exp(){
 
 // ----------------------------------------------------------------- //
 // 功能：无限池自动抽奖
-// 默认：奖池 300 的时候点击 222 下 (0.74)
+// 默认：奖池 300 的时候点击 240 下 (0.74)
 //      ->  400      点击 300 下
 // ----------------------------------------------------------------- //
 function infi_awards(n, pn){
@@ -105,7 +105,7 @@ function yanzuo_shougao(){
 	FS.P2();
 	FS.P3();
 
-	sleep(40000); // 看烟花 + 自动换人... 40s
+	sleep(45000); // 看烟花 + 自动换人... 45s
 
 	// --- ROUND 2 --- //
 	FS.C1(3, 1);  // 孔老师 加班
@@ -151,6 +151,42 @@ function yanzuo_shougao(){
 
 }
 
+
+
+
+function yanzuo_xinzang_auto(n){
+
+    if(!requestScreenCapture()){
+	    toast("请求截图失败");
+	    exit
+	}
+
+    
+	for ( i = 0; i < n; i++ ){
+        sleep(2000);
+        // 获取在点(x, y)处的颜色
+        var x = 335;   // 45AP 附近的点
+        var y = 1040;
+        //检测在点(x, y)处是否有颜色#000000(黑色) (模糊比较)
+        var isDetected = images.detectsColor(captureScreen(), "#000000", x, y);
+        
+        // print(isDetected)
+        // console.show()
+        if ( isDetected ){
+            FS.ADDAP();
+            FS.AuAPPLE();
+            FS.CONFIRM();
+        }
+    
+		FS.DTASK();
+		FS.ZHIJIE0();
+		FS.DZHUZHAN();
+
+		yanzuo_xinzang();
+
+		sleep(20000); // 15s
+	}
+}
 
 // ----------------------------------------------------------------- //
 // 活动：赝作复刻
@@ -222,3 +258,5 @@ function tst_skill(){
     // FS.SWITCH_SERVENT(3, 4); // 孔老师 下班 小玉 加班
 
 }
+
+
