@@ -7,12 +7,12 @@ sleep(1000);      // 1s  缓启动
 //  FS <==> FGO SERVENT
 var FS = require('fgo_cmd.js');
 
-// infi_awards(1);    // 抽无限池 - 括号内为所要抽取的池子数目
+// infi_awards(8);    // 抽无限池 - 括号内为所要抽取的池子数目
 // daily_exp();       // 周回 - 获取 EXP 种火
 
 // yanzuo_shougao();  // 赝作复刻 - 无限池效率 - 自动 + 手动
 // yanzuo_xinzang();  // 赝作复刻 - 术本刷心脏 - 小莫 3T 冲浪
-yanzuo_xinzang_auto(80);
+yanzuo_xinzang_auto(50);  //  晚间睡觉自动刷，随机选择助战
 
 // console.show();
 
@@ -78,9 +78,9 @@ function infi_awards(n, pn){
 		sleep(500);      // 0.5s  缓启动
 		for ( i = 0; i < count; i++ )
 			FS.INFI0();
-		FS.INFI1();
-		FS.INFI2();
-		FS.INFI3();
+		FS.INFI1(2000);
+		FS.INFI2(2000);
+		FS.INFI3(4000);
 	}
 }
 
@@ -179,7 +179,7 @@ function yanzuo_xinzang_auto(n){
         }
     
 		FS.DTASK();
-		FS.ZHIJIE0();
+		FS.ZHIJIE7();
 		FS.DZHUZHAN();
 
 		yanzuo_xinzang();
